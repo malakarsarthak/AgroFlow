@@ -222,10 +222,21 @@ export default function App() {
     }
   };
 
+  // if (!user) {
+  //   return <Auth onLogin={setUser} />;
+  // }
+// ===== VERCEL DEMO MODE START =====
+React.useEffect(() => {
   if (!user) {
-    return <Auth onLogin={setUser} />;
+    setUser({
+      id: "demo-user-001",   // ✅ required field
+      name: "Demo User",
+      email: "demo@agroflow.com"
+    });
   }
-
+}, []);
+// ===== VERCEL DEMO MODE END =====
+// ===== VERCEL DEMO MODE END =====
   const currentSensorData = sensorHistory.length > 0 ? sensorHistory[sensorHistory.length - 1] : null;
   let criticalMessage = null;
   if (currentSensorData) {
