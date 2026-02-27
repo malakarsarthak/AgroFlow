@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Remix: AgroFlow",
+  "description": "Smart Irrigation \u0026 Water Budgeting System for precision agriculture.",
+  "requestFramePermissions": [
+    "microphone",
+    "geolocation"
+  ]
+}
